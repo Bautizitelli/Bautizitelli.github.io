@@ -203,7 +203,6 @@ header .container{
     color: var(--darkOne);
     font-size: 1.1rem;
     margin: 1.9rem 0 2.5rem;
-    max-width: 600px;
     line-height: 2.3;
 }
 
@@ -319,24 +318,6 @@ ul.slider li:target{
     display: none;
 }
 
-@keyframes slide {
-    0% {margin-left: 0%;}
-    20% {margin-left: 0%;}
-
-    20% {margin-left: -100%;}
-    40% {margin-left: -100%;}
-
-    40% {margin-left: -200%;}
-    60% {margin-left: -200%;}
-
-    60% {margin-left: -300%;}
-    80% {margin-left: -300%;}
-
-    80% {margin-left: -400%;}
-    100% {margin-left: -400%;}
- 
-}
-
 @media screen and (max-width:870px){
    
     .hamburguer_menu{
@@ -416,16 +397,44 @@ ul.slider li:target{
 }
 
 @media screen and (max-width:470px){
-    .container{
-        padding: 0 1.5rem;
-    }
-    .big-title{
+        .big-title{
         font-size: 0.9rem;
     }
-    .text{
-        margin: 1.1rem 0 1.5rem;
+   
+    .container{
+        width: 100vw;
+        padding: 0;
     }
     .showcase-area .btn{
         font-size: 0.8rem;
+    }
+    .text{
+        width: 100vw;
+        padding-left: 50px;
+    }
+    .big-title{
+        width: 100vw;
+        padding-left: 50px;
+    }
+    .cta{
+        width: 100vw;
+        padding-left: 50px;
+    }
+    .showcase-area .left{
+        margin-right: 10% ;
+    }
+   
+    .big-wrapper .container .logo{
+        margin: 20px;
+    }
+    .hamburguer_menu{
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+    ul.slider li{
+        max-width: 100vw;
+        width: 100vw;
+        margin-left: 94px;
+        
     }
 }
