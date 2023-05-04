@@ -277,11 +277,6 @@ ul.slider li:target{
     transition: 0.5s;
 }
 
-.slider-menu li a:hover{
-    transform: scale(1.1)
-}
-
-
 .toggle-btn{
     display: inline-block;
     border: none;
