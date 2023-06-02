@@ -29,8 +29,6 @@
 }
 body{
     font-family: 'Roboto Condensed', sans-serif;
-    /* font-family: 'Bebas Neue', cursive;
-    font-family: 'Roboto Mono', monospace */
 }
 img{
     width: 100%;
@@ -40,7 +38,9 @@ a{
     text-decoration: none;
 }
 .big-wrapper{
-    padding: 1.7rem 0 2rem;
+    /* padding: 1.7rem 0 2rem; */
+    padding-top: 1.7rem;
+    padding-bottom: 2rem;
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -85,6 +85,7 @@ header .container{
     margin-top: -0.6rem;
     color: red;
 }
+
 .logo img.whiteLogo{
     display: none;
     width: 50px;
@@ -101,9 +102,7 @@ header .container{
     line-height: 1.2;
     font-weight: 700;
 }
-/* .links{
-    display: none;
-} */
+
 
 .links ul{
     display: flex;
@@ -230,8 +229,8 @@ ul.slider li{
     position: absolute;
     left: 0;
     top: 0;
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity .3s;
     border: 1px solid var(--darkLighter);
@@ -277,6 +276,11 @@ ul.slider li:target{
     transition: 0.5s;
 }
 
+.slider-menu li a:hover{
+    transform: scale(1.1)
+}
+
+
 .toggle-btn{
     display: inline-block;
     border: none;
@@ -312,9 +316,13 @@ ul.slider li:target{
 .big-wrapper.dark .toggle-btn i:first-child{
     display: none;
 }
+body.no-scroll {
+    overflow: hidden;
+  }
 
 @media screen and (max-width:870px){
    
+    
     .hamburguer_menu{
         display: flex;
         z-index: 99;
@@ -373,14 +381,37 @@ ul.slider li:target{
         background-color: white
     }
     .showcase-area{
-        /* padding: 2.5rem; */
-        max-width: 700px;
+        max-width: 375px;
         margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
     }
+    
     .showcase-area .container{
+        width: 100%;
+        max-width: 380px;
         grid-template-columns: 1fr;
         justify-content: center;
-        grid-gap:2rem;
+        grid-gap:2rem;    
+    }
+
+    .showcase-area .container .left{
+        padding: 15px;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    ul.slider li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        max-width: 380px;
+    }
+    ul.slider{
+        max-width: 370px;
     }
     .big-title{
         font-size: 1.1rem;
@@ -391,8 +422,8 @@ ul.slider li:target{
     }
 }
 
-@media screen and (max-width:470px){
-        .big-title{
+/* @media screen and (max-width:470px){  
+    .big-title{
         font-size: 0.9rem;
     }
    
@@ -432,4 +463,4 @@ ul.slider li:target{
         margin-left: 94px;
         
     }
-}
+} */
